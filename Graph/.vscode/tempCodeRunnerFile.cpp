@@ -1,0 +1,1 @@
+cout<<extraEdges<<" "<<componenets-1<<endl;
