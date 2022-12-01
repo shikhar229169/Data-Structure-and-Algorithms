@@ -2,6 +2,9 @@
 #include<vector>
 using namespace std;
 
+// link to the problem
+//https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/
+
 class Node {
     public:
         int num;
