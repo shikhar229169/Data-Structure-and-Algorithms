@@ -77,6 +77,7 @@ int main(){
         connections.push_back({u, v});
     }
 
-    cout<<findStronglyConnectedComponents(connections, vertices);
+    int Count=findStronglyConnectedComponents(connections, vertices);
+    cout<<"Total number of strognly connected components are: "<<Count<<endl;
     return 0;
 }
