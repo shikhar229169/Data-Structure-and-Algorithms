@@ -1,3 +1,8 @@
+#include<iostream>
+#include<vector>
+#include<queue>
+using namespace std;
+
 // using for simplicity to denote that there is an edge to a nbr with weight 'wt'
 class Edge {
     public:
@@ -54,4 +59,26 @@ void findMinimumSpanningTree(vector<vector<Edge>>& graph) {
     }
 
     cout<<endl<<"Minimum cost obtained is "<<cost<<endl;
+}
+
+int main(){
+    int vertices, edges;
+    cin>>vertices>>edges;
+    // considering that the vertices in the graph will be from 0 to (vertices-1)
+    // also considering that the graph is connected, otherwise minimum spanning tree is not possible for that case
+
+    vector<vector<Edge>> graph(vertices);
+
+    for (int i=0; i<edges; i++) {
+        int u, v, wt;
+        cin>>u>>v>>wt;
+
+        // as it is an undirected graph, therefore through 'u' we can reach 'v' via weight 'wt' and vice-versa
+
+        graph[u].push_back(Edge(u, v, wt));
+        graph[v].push_back(Edge(v, u, wt));
+    }
+
+    findMinimumSpanningTree(graph);
+    return 0;
 }
