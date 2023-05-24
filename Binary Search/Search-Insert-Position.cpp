@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+using namespace std;
 
 class Solution {
 public:
@@ -29,12 +30,12 @@ public:
 
 
 // Uncomment it to run it on your system
-// int main() {
-//     Solution myclass;
-//     std::vector<int> nums = {1, 3, 5, 6};
-//     int target = 6;
-//     int result = myclass.searchInsert(nums, target);
-//     std::cout << result << std::endl;
+int main() {
+    Solution myclass;
+    std::vector<int> nums = {1, 3, 5, 6};
+    int target = 6;
+    int result = myclass.searchInsert(nums, target);
+    std::cout << result << std::endl;
 
-//     return 0;
-// }
+    return 0;
+}
