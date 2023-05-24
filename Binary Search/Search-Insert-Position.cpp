@@ -19,12 +19,7 @@ public:
                 return mid;
             }
         }
-
-        if (target < nums[end]) {
-            return end;
-        } else {
-            return end + 1;
-        }
+        return end + 1;
     }
 };
 
